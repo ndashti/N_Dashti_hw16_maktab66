@@ -1,0 +1,117 @@
+$primary-color: #2eb396;
+$secondary-color: #e6eef9;
+
+
+*,
+*::after,
+*::before{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    background-color: rgb(47, 53, 50);
+    color: rgb(204, 203, 203);
+    margin: 6% auto;
+    padding: 15px;
+    overflow: hidden;
+	border: 15px solid gray;
+}
+
+
+
+
+.tabs {
+	display: flex;
+	width: 100%;
+	position: relative;
+	background-color: rgb(144, 146, 145);
+    justify-content: space-between;
+
+	* {
+		z-index: 2;
+	}
+}
+
+input[type="radio"] {
+	display: none;
+	&:checked {
+		& + label {
+			color: (white);
+		}
+	}
+}
+
+.tab {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 54px;
+	width: 100%;
+	font-size: 1.25rem;
+	cursor: pointer;
+	transition: color 0.15s ease-in;
+}
+
+input[id="radio-1"] {
+	&:checked {
+		& ~ .glider {
+			transform: translateX(0);
+		}
+	}
+}
+
+input[id="radio-2"] {
+	&:checked {
+		& ~ .glider {
+			transform: translateX(-100%);
+		}
+	}
+}
+
+
+.glider {
+	position: absolute;
+	display: flex;
+	height: 54px;
+	width: 50%;
+	background-color: $primary-color;
+	z-index: 1;
+	transition: 0.25s ease-out;
+}
+input  {
+	padding: 5px 10px;
+	margin: 5px;
+	font-size: .9rem;
+    background-color: rgb(47, 53, 50);
+    border: 3px solid gray;
+    color: #e6eef9;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+input :focus {
+    border: 3px solid #ccc;
+  }
+
+  select{
+	padding: 5px 10px;
+	margin: 5px;
+	background-color: rgb(47, 53, 50);
+    border: 3px solid gray;
+    color: #e6eef9;
+	font-size: .9rem;
+
+  }
+
+  h2{
+	  font-size: 1.2rem;
+	  margin-top: 20px;
+  }

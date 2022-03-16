@@ -1,3 +1,14 @@
+@font-face {
+  font-family: vazir;
+  src: url('./assets/font/Vazirmatn-Regular.ttf');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  font-family: vazir;
+}
 .App {
   text-align: center;
 }
