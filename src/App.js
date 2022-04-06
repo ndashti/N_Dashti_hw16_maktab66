@@ -1,12 +1,20 @@
-import './App.css';
-import Parent from './component/Parent';
-import ParentApp from './component1/ParentApp';
+import "./App.css";
+
+//context
+import { ItemContextProvider } from "./context/ItemContextProvider";
+
+//component
+import AllItems from "./components/AllItems";
+import SelectedItems from "./components/SelectedItems";
+
 function App() {
   return (
-    <div className="App">
-        {/* <ParentApp /> */}
-        <Parent />
-    </div>
+    <ItemContextProvider>
+      <div className="App">
+        <AllItems />
+        <SelectedItems />
+      </div>
+    </ItemContextProvider>
   );
 }
 
